@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - finalInstStore</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>Instrument Store</h1>
+<ul id="app">
+  <li v-for="item in items" :key="item.name">
+
+    <div class="box">
+      <a class="button" href="#popup1">
+        {{ item.name }}
+      </a>
+    </div>
+    
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAkykAE6cqyrvzlNwfkHyznh9OHX4AN4outtiXdwGhJ9ex_0c0e_Cv6JaZNw&usqp=CAc" alt="Italian Trulli">
+      
+    </img>
+  <counter ></counter>
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <h2>{{item.name}}</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          {{item.type}} </br>
+          {{item.price}} </br>
+          {{item.brand}}
+        </div>
+      </div>
+
+  </li>
+</ul>
+
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>{{item.name}}</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+    </div>
+  </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
